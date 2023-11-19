@@ -1,0 +1,55 @@
+int testfunc(int a, int b) {
+	/* This is test comments */
+	/* This is test comments **/
+	/ * This is test comments */
+	/* This is test comments * / */
+	
+	int a123b234;
+	int 123a234b;
+	int testarr[10];
+
+	if (a == b) {
+		a = b - 1;
+		b = a / 3;
+		testarr[3] = 4;
+	}
+
+	if (a > b) {
+		b = a * b;
+	}
+
+	if (a < b) {
+		a = a * b;
+	}
+
+	if (a >= b) {
+		b = a - b + 1;
+	}
+
+	if (a <= b) {
+		a = b - a + 1;
+	}
+
+	if (a != b) {
+		a = b;
+	}
+
+	int i = 0;
+	while (i < 10) {
+		i = i + 1;
+		testarr[i] = testarr[i - 1];
+	}
+
+	return a;
+}
+
+int main(void) {
+	testfunc(1, 1);
+	testfunc(1, 2);
+	testfunc(2, 1);
+
+	return 0;
+}
+
+/* This is test comments
+

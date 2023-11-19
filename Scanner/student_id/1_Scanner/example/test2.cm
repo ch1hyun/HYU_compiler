@@ -1,0 +1,21 @@
+A
+
+/ *
+   comment test 2
+   
+   */
+
+A
+
+/*
+   comment test 2
+
+   * /
+**/   
+
+B
+
+/*
+
+C
+
