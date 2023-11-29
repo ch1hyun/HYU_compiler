@@ -1,0 +1,162 @@
+
+C-MINUS COMPILATION: ./test.3.txt
+
+Syntax tree:
+  Function Declaration: name = test, return type = int
+    Void Parameter
+    Compound Statement:
+      Return Statement:
+        Const: 1
+  Function Declaration: name = main, return type = void
+    Void Parameter
+    Compound Statement:
+      Variable Declaration: name = a, type = int
+      Variable Declaration: name = b, type = int
+      Variable Declaration: name = c, type = int
+      Variable Declaration: name = d, type = int[]
+        Const: 100
+      Assign:
+        Variable: name = a
+        Const: 0
+      While Statement:
+        Op: <
+          Variable: name = a
+          Const: 100
+        Compound Statement:
+          Assign:
+            Variable: name = d
+              Variable: name = a
+            Const: 0
+          Assign:
+            Variable: name = a
+            Op: +
+              Variable: name = a
+              Const: 1
+      Assign:
+        Variable: name = a
+        Const: 0
+      While Statement:
+        Op: <
+          Variable: name = a
+          Const: 100
+        Compound Statement:
+          Assign:
+            Variable: name = b
+            Const: 0
+          While Statement:
+            Op: <
+              Variable: name = b
+              Const: 100
+            Compound Statement:
+              If-Else Statement:
+                Op: <
+                  Variable: name = a
+                  Const: 30
+                Compound Statement:
+                  If-Else Statement:
+                    Op: <
+                      Variable: name = b
+                      Const: 30
+                    Compound Statement:
+                      Assign:
+                        Variable: name = d
+                          Variable: name = b
+                        Op: +
+                          Variable: name = d
+                            Variable: name = c
+                          Const: 3
+                    If-Else Statement:
+                      Op: <
+                        Variable: name = b
+                        Const: 60
+                      Compound Statement:
+                        Assign:
+                          Variable: name = d
+                            Variable: name = b
+                          Op: +
+                            Variable: name = d
+                              Variable: name = a
+                            Const: 100
+                      Compound Statement:
+                        Assign:
+                          Variable: name = d
+                            Variable: name = a
+                          Op: -
+                            Variable: name = d
+                              Variable: name = b
+                            Const: 100
+                If-Else Statement:
+                  Op: <
+                    Variable: name = a
+                    Const: 60
+                  Compound Statement:
+                    If-Else Statement:
+                      Op: <
+                        Variable: name = b
+                        Const: 30
+                      Compound Statement:
+                        Assign:
+                          Variable: name = d
+                            Variable: name = b
+                          Op: +
+                            Variable: name = d
+                              Variable: name = a
+                            Const: 60
+                      If-Else Statement:
+                        Op: <
+                          Variable: name = b
+                          Const: 60
+                        Compound Statement:
+                          Assign:
+                            Variable: name = d
+                              Variable: name = b
+                            Variable: name = d
+                              Op: +
+                                Op: -
+                                  Variable: name = b
+                                  Variable: name = a
+                                Const: 30
+                        Compound Statement:
+                          Assign:
+                            Variable: name = c
+                            Const: 1
+                          While Statement:
+                            Op: <
+                              Variable: name = c
+                              Const: 10
+                            Compound Statement:
+                              Assign:
+                                Variable: name = d
+                                  Variable: name = c
+                                Op: +
+                                  Variable: name = d
+                                    Variable: name = b
+                                  Const: 99
+                  Compound Statement:
+                    If-Else Statement:
+                      Op: >
+                        Variable: name = b
+                        Const: 90
+                      Compound Statement:
+                        If-Else Statement:
+                          Call: function name = test
+                          Compound Statement:
+                            Call: function name = output
+                              Const: 1
+                          Compound Statement:
+                            Call: function name = output
+                              Variable: name = d
+                                Variable: name = b
+                      Compound Statement:
+                        Assign:
+                          Variable: name = d
+                            Variable: name = error
+                          Op: -
+                            Variable: name = d
+                              Variable: name = error
+                            Variable: name = error
+              Assign:
+                Variable: name = b
+                Op: +
+                  Variable: name = b
+                  Const: 1

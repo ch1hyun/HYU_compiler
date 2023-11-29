@@ -1,0 +1,81 @@
+/* multiple statement TEST */
+
+int test(void)
+{
+    return 1;
+}
+
+void main(void)
+{
+    int a; int b; int c; int d[100];
+
+    a = 0;
+    while (a < 100) {
+        d[a] = 0;
+        a = a + 1;
+    }
+
+    a = 0;
+    while (a < 100)
+    {
+        b = 0;
+        while (b < 100)
+        {
+            if (a < 30)
+            {
+                if (b < 30)
+                {
+                    /* semantic error but disregard */
+                    d[b] = d[c] + 3;
+                }
+                else if (b < 60)
+                {
+                    d[b] = d[a] + 100;
+                }
+                else
+                {
+                    d[a] = d[b] - 100;
+                }
+            }
+            else if (a < 60)
+            {
+                if (b < 30)
+                {
+                    d[b] = d[a] + 60;
+                }
+                else if (b < 60)
+                {
+                    d[b] = d[b - a + 30];
+                }
+                else
+                {
+                    c = 1;
+                    while (c < 10)
+                    {
+                        d[c] = d[b] + 99;
+                    }
+                }
+            }
+            else 
+            {
+                if (b > 90)
+                {
+                    if (test())
+                    {
+                        output(1);
+                    }
+                    else
+                    {
+                        output(d[b]);
+                    }
+                }
+                else
+                {
+                    /* semantic error but disregard */
+                    d[error] = d[error] - error;
+                }
+            }
+            b = b + 1;
+        }
+    }
+}

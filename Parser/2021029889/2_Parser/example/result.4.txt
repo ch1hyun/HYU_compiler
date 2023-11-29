@@ -1,0 +1,71 @@
+
+C-MINUS COMPILATION: ./test.4.txt
+
+Syntax tree:
+  Function Declaration: name = test, return type = int
+    Parameter: name = a, type = int
+    Parameter: name = b, type = int
+    Compound Statement:
+      Variable Declaration: name = result, type = int
+      Assign:
+        Variable: name = result
+        Op: +
+          Op: *
+            Const: 3
+            Op: -
+              Op: -
+                Op: +
+                  Op: -
+                    Const: 6
+                    Op: *
+                      Const: 7
+                      Op: -
+                        Const: 5
+                        Const: 1
+                  Const: 88
+                Op: -
+                  Op: +
+                    Op: *
+                      Op: -
+                        Const: 3
+                        Const: 1
+                      Variable: name = a
+                    Op: /
+                      Op: -
+                        Variable: name = b
+                        Const: 0
+                      Const: 4
+                  Op: *
+                    Const: 2
+                    Const: 9
+              Op: -
+                Const: 4
+                Op: *
+                  Const: 3
+                  Op: *
+                    Op: *
+                      Const: 6
+                      Const: 7
+                    Op: +
+                      Const: 2
+                      Const: 1
+          Const: 4
+      Return Statement:
+        Variable: name = result
+  Function Declaration: name = main, return type = void
+    Void Parameter
+    Compound Statement:
+      Variable Declaration: name = a, type = int
+      Variable Declaration: name = b, type = int
+      Variable Declaration: name = c, type = int
+      Variable Declaration: name = d, type = int
+      Assign:
+        Variable: name = a
+        Const: 100
+      Assign:
+        Variable: name = b
+        Const: 200
+      Call: function name = output
+        Call: function name = test
+          Variable: name = a
+          Variable: name = b
